@@ -1,0 +1,33 @@
+@model Catalogos
+
+<h2>Eliminar Catalogo</h2>
+<form asp-action="Delete" asp-asp-route="@Model.id">
+    <div class="form-group">
+        <label for="Nombre">
+            Nombre:
+            <input asp-for="Nombre" class="from-control" disabled />
+        </label>
+        <label for="Descipcion">
+            Descripcion:
+            <input asp-for="Descripcion" class="from-control" disabled />
+        </label>
+        <label for="Fecha_registro">
+            Fecha de registro :
+            <input asp-for="Fecha_registro" class="from-control" type="date" disabled />
+        </label>
+    </div>
+    <label for="Feha_Inicio">
+        Fecha de inicio:
+        <input asp-for="Feha_Inicio" class="from-control" type="date" disabled />
+    </label>
+    <label for="Fecha_Actualizacion">
+        Fecha de actualizacion:
+        <input asp-for="Fecha_Actualizacion" class="from-control" type="date" disabled />
+    </label>
+    <label for="Estado">
+        Estado
+        <input asp-for="Estado" class="from-control" disabled />
+    </label>
+    <button type="=submit" class="btn btn-danger">Eliminar</button>
+    <button asp-action="Index" class="btn btn-dark">Cancelar</button>
+</form>

@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "Create";
+}
+@model Catalogos
+<h2>Crear nuevo Catalogo</h2>
+<form asp-action="Create">
+    <div class="form-group">
+        <label for="Nombre">
+            Nombre:
+            <input asp-for="Nombre" class="from-control" required />
+        </label>
+        <label for="Descipcion">
+            Descripcion:
+            <input asp-for="Descripcion" class="from-control" required />
+        </label>
+        <label for="Fecha_registro">
+            Fecha de registro :
+            <input asp-for="Fecha_registro" class="from-control" type="date" required />
+        </label>
+    </div>
+    <label for="Feha_Inicio">
+        Fecha de inicio:
+        <input asp-for="Feha_Inicio" class="from-control" type="date" required />
+    </label>
+    <label for="Fecha_Actualizacion">
+        Fecha de actualizacion:
+        <input asp-for="Fecha_Actualizacion" class="from-control" type="date" required />
+    </label>
+    <label for="Estado">
+        Estado
+        <input asp-for="Estado" class="from-control" />
+    </label>
+    <button type="=submit" class="btn btn-primary">Guardar</button>
+       <a asp-action="Index">Regresar</a>
+</form>
